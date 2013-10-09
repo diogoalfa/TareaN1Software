@@ -20,7 +20,7 @@ int main(int argc, const char * argv[])
     cout<<"::INGRESE UNA OPCION::"<<endl;
     cin>>opcionString;
     
-    if (opcionString.compare("-g")) {
+    if (opcionString=="-g") {
         opcion=1;
     }
     
