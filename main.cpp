@@ -16,11 +16,6 @@ struct vectorChar {
     int largo;
 };
 
-struct tipoPolinomio {
-    int tipoPolinomio=0;
-    int numPolinomio;
-};
-
 struct tipPolinomio {
     int tipoPolinomio;
 };
