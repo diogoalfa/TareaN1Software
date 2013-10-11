@@ -2,8 +2,8 @@
 // main.cpp
 // TareaN1Software
 //
-// Created by Diego Cristobal Navia Fuentes on 08-10-13.
-// Copyright (c) 2013 Diego Cristobal Navia Fuentes. All rights reserved.
+// Created by Sebastian Esparza, Diego Navia, Francisco Ramirez.
+// Copyright (c) 2013 Sebastian Esparza, Diego Navia, Francisco Ramirez. All rights reserved.
 //
 
 #include <iostream>
@@ -66,9 +66,9 @@ void integrarConExponente(vectorChar polinomios[],int numPolinomio){
             
         }
     
-    polinomios[i].largo=polinomios[i].largo+2;
-    
+    polinomios[i].largo=polinomios[i].largo+2;    
 }
+
 void integrarSinExponente(vectorChar polinomios[],int numPolinomio){
     
     int largoPolinomio=0;
@@ -87,10 +87,8 @@ void integrarSinExponente(vectorChar polinomios[],int numPolinomio){
         
     }
     polinomios[i].largo=polinomios[i].largo+4;
-
-    
-    
 }
+
 void integrarConstante(vectorChar polinomios[],int numPolinomio){
   
     int largoPolinomio=0;
@@ -102,12 +100,9 @@ void integrarConstante(vectorChar polinomios[],int numPolinomio){
      polinomios[i].polinomio[largoPolinomio]='x';
 
    // cout<<"Largo Polimonio :"<<polinomios[i].largo<<endl;
-    polinomios[i].largo=polinomios[i].largo+1;
-    
+    polinomios[i].largo=polinomios[i].largo+1;    
 }
 
-
-//
 void integrarPolinomio(vectorChar polinomios[],int n){
     
     int largoPolinomio=0;
@@ -164,9 +159,7 @@ void integrarPolinomio(vectorChar polinomios[],int n){
     
     cout<<"INTEGRADO :"<<endl;
     imprimirVectorStringSeparado(polinomios, n);
-    
 }
-
 
 //DESCOMPONE EL STRING INICIAL EL SUBSTRING .SEPARADOS POR EL MAS .CREA POLINOMIOS MAS PEQUEÑOS
 void descomponerPolinomio(char polinomio[]){
@@ -188,8 +181,6 @@ void descomponerPolinomio(char polinomio[]){
     imprimirVectorStringSeparado(polAux,j);
     integrarPolinomio(polAux, j);
 }
-
-
 
 int main(int argc, const char * argv[])
 {
@@ -217,7 +208,7 @@ int main(int argc, const char * argv[])
     {
        opcion=4;
     }
-    
+    if(argv[2]!='\0') //la unica manera  de que este vacio es que el comando sea "-v" el cual no lo reconocia al ingresarse solo
         strcpy( polinomio, argv[2] );
     
         switch (opcion) {
@@ -226,7 +217,10 @@ int main(int argc, const char * argv[])
                 descomponerPolinomio(polinomio);          
                 break;
             case 2:
-                cout<<"Datos integrantes"<<endl;
+                cout<<"Datos integrantes:"<<endl;
+                cout<<"-Sebastian Esparza"<<endl;
+                cout<<"-Diego Navia"<<endl;
+                cout<<"-Francisco Ramirez"<<endl;
                 break;
             case 3:
                  cout<<"PNG"<<endl;
