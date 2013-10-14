@@ -167,7 +167,9 @@ void descomponerPolinomio(char polinomio[]){
     int j=0,k=0;
     vectorChar polAux[20];
     //cout<<"Largo Polinomio :"<<largoString(polinomio)<<endl;
-    for (int i=0; i<largoString(polinomio); i++) {
+    int largo=largoString(polinomio);
+    polinomio[largo]='+';
+    for (int i=0; i<largo; i++) {
         if (polinomio[i]!='+') {
             polAux[j].polinomio[k]=polinomio[i];
             k++;
